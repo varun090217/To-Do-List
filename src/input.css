@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    box-shadow: #3b82f6;
+    font-family: 'Poppins', sans-serif; /* Use a clean, modern font */
+  }
+
+  input{
+    display: flex;
+  }
+  
+  /* Background for input and button area */
+  #to-do-input {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effects */
+  #to-do-input:hover {
+    background-color: #4b5563; /* Darken the input on hover */
+  }
+  
+  #to-do-btn {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effects for button */
+  #to-do-btn:hover {
+    background-color: #3b82f6; /* Blue button hover effect */
+  }
+  
+  button{
+    margin-left: 2px;
+  }
+  /* Task item styles */
+  li {
+    word-wrap: break-word; /* Breaks the word if necessary to wrap it */
+    overflow-wrap: break-word; /* Ensures word breaks at container edge */
+    white-space: normal; /* Ensures wrapping happens (default behavior) */
+    margin-top: 8px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1f2937; /* Dark background for task */
+    color: #e0f7fa; /* Light cyan text */
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  li.completed {
+    text-decoration: line-through; /* Strikethrough for completed tasks */
+    background-color: #4b5563; /* Change background when completed */
+  }
+  
+  /* Style for delete button */
+  li button {
+    background-color: #f87171; /* Red color for delete button */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+  }
+  
+  li button:hover {
+    background-color: #ef4444; /* Darker red when hovering delete button */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 640px) {
+    /* Stack elements vertically on smaller screens */
+    .bg-gray-900 {
+      width: 100%;
+    }
+  
+    #to-do-input, #to-do-btn {
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 2px;
+    }
+  
+    .bg-gray-900 {
+      padding: 20px;
+    }
+  }
